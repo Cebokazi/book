@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+        
+    <body>  
+        <div class="mobile_menu">
+            <img class="slide-toggle" src="list.png" width="25" height="25">
+        </div>
+        
+        <div id="drop-down" class="box">
+            <ul class="list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">products</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Conatct Us</a></li>
+            </ul>
+        </div>
+
+        <section class = "banner">
+            <h2>BOOK FOR YOUR VIRTUAL TOUR NOW!</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>Book your ticket </h3>
+                    <form>
+                        <div class = "form-row">
+                            <select name = "days">
+                                <option value = "day-select">Select Day</option>
+                                <option value = "sunday">Sunday</option>
+                                <option value = "monday">Monday</option>
+                                <option value = "tuesday">Tuesday</option>
+                                <option value = "wednesday">Wednesday</option>
+                                <option value = "thursday">Thursday</option>
+                                <option value = "friday">Friday</option>
+                                <option value = "saturday">Saturday</option>
+                            </select>
+
+                            <select name = "persons">
+                                <option value = "person-select">Pricing</option>
+                                <option value = "10">Adults - R50</option>
+                                <option value = "10">Children - R25</option>
+                                <option value = "10">Pensioners - R25</option>
+                                <option value = "10">School Groups - R8</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" placeholder="Full Names">
+                            <input type = "text" placeholder="Phone Number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="How Many Persons?" min = "1">
+                            <input type = "submit" value = "BOOK NOW">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function(){
+            $(".slide-toggle").click(function(){
+                $(".box").slideToggle();
+            });
+            });
+        </script>
+
+    </body>
+</html>
