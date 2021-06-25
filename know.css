@@ -1,0 +1,125 @@
+
+
+section {
+    align-items: center;
+    background: url("michel-rocha-GSIzNfR9GLE-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+ h1 {
+    margin: 20px 20px;
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-top: 70px;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+.content {
+    margin: 10px 20px;
+    font-size: 1rem;
+}
+
+.content img {
+    max-width: 500px;
+    object-fit: cover;
+    margin-top: 10%;
+}
+
+.content p {
+    margin: 5px;
+    font-weight: lighter;
+    font-size: xx-small;
+    color: #222;
+    margin-left: 25%;
+    text-decoration: underline;
+}
+
+.moreToRead {
+    margin: 0 50px;
+    width: 50%;
+}
+
+.innerWrap {
+    margin: 20px 0px;
+}
+
+.innerWrap .card {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.innerWrap .card img {
+    max-width: 250px;
+    object-fit: cover;
+}
+
+.card .text {
+    padding-left: 30px;
+}
+
+.card .text h3 a{
+    color: #222;
+    text-align: left;
+    text-decoration: none;
+} 
+
+h2 {
+    margin-bottom: 50px;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    article {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .content img {
+        max-width: 350px;
+    }
+    .content p {
+        text-align: center;
+        margin: 0 auto;
+    }
+   
+    .moreToRead {
+        margin: 0 auto;
+        padding: 150px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .moreToRead h2 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 650px) {
+    .moreToRead {
+        margin: 0px -10px;
+        padding: 50px;
+        text-align: center;
+    }
+    .text h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .moreToRead {
+        margin: 0px -5px;
+        padding: 20px;
+    }
+}
