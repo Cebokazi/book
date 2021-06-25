@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
-
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     </head>
+    <body>
         
-    <body>  
-        <div class="mobile_menu">
-            <img class="slide-toggle" src="list.png" width="25" height="25">
-        </div>
-        
-        <div id="drop-down" class="box">
-            <ul class="list">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">products</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Conatct Us</a></li>
-            </ul>
-        </div>
+        <!-- header -->
+        <header class = "header" id = "home">
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span>VIRTUALTOUR.</span>
+                </div>
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2>THE CASTLE OF GOOD HOPE VIRTUAL TOUR</h2>
+                <p><i>" - Hidden Histories..."</i></p>
+                <a href="#about">
+                    <div class="scroll-down"></div>
+                  </a>
+            </div>
+        </header>
+
+        <section id="about">`
+            <div class="container">
+                <h1>About</h1>
+                <!--<div class="navbar">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#book">Book</a>
+                    <a href="#contact">Contact</a>
+                  </div>-->
+                <div class="grid">
+                    <div class="left">
+                        <img src="img1.jpeg">
+                    </div>
+                    <div class="right">
+                        <h1>The Castle Of Good Hope</h1>
+                        <h3><i>" - Hidden Histories.."</i></h3>
+                        <p>The Castle of Good Hope in 1680 was used to announce the time, as well as warning citizens in case of danger, since it could be heard 10 kilometres away. It was also rung to summon residents and soldiers when important announcements needed to be made.</p>
+                        <a href="index2.html" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class = "banner">
-            <h2>BOOK FOR YOUR VIRTUAL TOUR NOW!</h2>
+            <!--<div class="navbar2">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#book">Book</a>
+                <a href="#contact">Contact</a>
+              </div>-->
+            <h1>BOOK FOR YOUR VIRTUAL TOUR NOW!</h1>
             <div class = "card-container">
                 <div class = "card-img">
-                    <!-- image here -->
                 </div>
 
                 <div class = "card-content">
                     <h3>Book your ticket </h3>
                     <form>
                         <div class = "form-row">
-                            <select name = "days">
+                            <select name = "days" id= "days" required>
                                 <option value = "day-select">Select Day</option>
                                 <option value = "sunday">Sunday</option>
                                 <option value = "monday">Monday</option>
@@ -48,7 +75,7 @@
                                 <option value = "saturday">Saturday</option>
                             </select>
 
-                            <select name = "persons">
+                            <select name = "days" id= "days" required>
                                 <option value = "person-select">Pricing</option>
                                 <option value = "10">Adults - R50</option>
                                 <option value = "10">Children - R25</option>
@@ -59,42 +86,49 @@
                         </div>
 
                         <div class = "form-row">
-                            <input type = "text" placeholder="Full Names">
-                            <input type = "text" placeholder="Phone Number">
+                            <input type = "text" placeholder="Full Names" required>
+                            <input type = "text" placeholder="Phone Number" required>
                         </div>
 
                         <div class = "form-row">
-                            <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <input type = "submit" value = "BOOK NOW">
+                            <input type = "number" placeholder="How Many Persons?" min = "1" required>
                         </div>
+
+                        <a href="https://vigilant-jang-fa2947.netlify.app/" class="btn2">BOOK NOW</a>
                     </form>
                 </div>
             </div>
         </section>
 
+        <section id="contact">
+            <div class="contact-info">
+                <div class="card">
+                  <i class="card-icon far fa-envelope"></i>
+                  <p>info@castleofgoodhope.co.za</p>
+                </div>
+          
+                <div class="card">
+                  <i class="card-icon fas fa-phone"></i>
+                  <p>+27 21 787 1249</p>
+                  <p>+27 21 461 4673</p>
+                </div>
+          
+                <div class="card">
+                  <i class="card-icon fas fa-map-marker-alt"></i>
+                  <p>Corner of</p>
+                    <p>Castle and Darling Streets</p>
+                    <p>CAPE TOWN</p>
+                    <p>8001</p>
+                    <p>South Africa</p>
+                </div>
+              </div>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
-            <script type="text/javascript">
-            $(document).ready(function(){
-            $(".slide-toggle").click(function(){
-                $(".box").slideToggle();
-            });
-            });
-        </script>
-
+        <footer>
+            <div class="text">
+              <span>Done By The Quenss - © 2021 All Rights Reserved</span>
+            </div>
+          </footer>
+           
     </body>
 </html>
