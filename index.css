@@ -1,66 +1,289 @@
-/*NAVBAR*/
-
-body {
-    margin:0px;
-}
-
-#drop-down {
- background: #fff;
- overflow: hidden;
- box-shadow: 0px 1px 4px -2px !important;
-  padding: 15px;
-}
-          
-.navbar {
-  width: 1170px;
-  margin: auto;
-}
-          
-  .list {
-  margin: 0;
-  Float: right;
-}
-          
-  li {
-  display: inline-block;
-  list-style: noen;
-  Padding: 7px;
-}
-          
- ul li a {
-  color: #000;
-  text-decoration: none;
-  padding: 25px;
- font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  font-style: normal;
-}
-          
-  .list li a:hover {
-  background: gray;
-   color:#fff;
-}
-
-/*BOOKINGS*/
-
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
-    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
-.banner{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("castle.jpg") center/cover no-repeat;
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid lightgrey;
+    position: absolute;
+    left: 50%;
+    top: 600px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1%;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid lightgrey;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+
+.flex{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 8px 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+@media(max-width: 500px){
+    body{
+        font-size: 14px;
+    }
+}
+
+.header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("castle.jpg") center/cover no-repeat;
+    min-height: 100vh;
     color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.head-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-top span{
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.head-top span:hover{
+    color: var(--yellow);
+}
+.head-bottom{
+    flex: 1;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+.head-bottom h2{
+    padding: 22px 0;
+    font-size: 45px;
+    border-bottom: 1px solid #fff;
+}
+.head-bottom p{
+    opacity: 0.7;
+    font-size: 20px;
+    margin: 45px auto;
+    width: 60vw;
+}
+.head-btn{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background: transparent;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.head-btn:hover{
+    background: transparent;
+}
+@media(max-width: 500px){
+    .head-btn{
+        font-size: 17px;
+    }
+    .head-bottom h2{
+        font-size: 28px;
+    }
+    .head-bottom p{
+        font-size: 17px;
+        margin: 20px auto;
+    }
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("michel-rocha-GSIzNfR9GLE-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*.navbar {
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    margin-top: 1%;
+    width: 100%;
+    height: 9vh;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }*/
+  
+.container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.right > *{
+    margin-bottom: 1.1rem;
+    color: #222;
+}
+
+.right h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.right p{
+    text-align: justify;
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.btn::after{
+    content: "";
+    background: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width .5s ease;
+}
+.btn:hover::after{
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-family: Acme Regular;
+    font-weight: bolder;
+
+}
+@media (max-width:768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        margin-left: 150px;
+    }
+}
+
+.banner{
+    min-height: 100vh;
+    background: url("jess-bailey-K9BOrwoFVYc-unsplash.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
     padding-bottom: 20px;
 }
+
+/*.navbar2 {
+    overflow: hidden;
+    background-color: transparent;
+    position: sticky;
+    margin-top: 1%;
+    width: 100%;
+    height: 9vh;
+    margin-left: 500px;
+  }
+  
+  .navbar2 a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar2 a:hover {
+    background: #ddd;
+    color: black;
+  }*/
+
+
 .card-container{
     display: grid;
     grid-template-columns: 420px 420px;
@@ -103,15 +326,28 @@ form select, form input{
 form input[type = text], form input[type = number], form input::placeholder, select{
     color: #9a9a9a;
 }
-form input[type = submit]{
-    color: #fff;
-    background: lightblue;
-    padding: 12px 0;
-    border-radius: 4px;
-    cursor: pointer;
+
+.btn2{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    margin-left: 130px;
+    color: black;
 }
-form input[type = submit]:hover{
+
+.btn2:hover {
     color: gray;
+}
+
+
+@media (max-width:768px){
+    .btn2 {
+        margin-left: 150px;
+    }
 }
 
 @media(max-width: 992px){
@@ -124,127 +360,105 @@ form input[type = submit]:hover{
     }
 }
 
+#contact {
+    height: 100vh;
+     display: flex;
+     align-items: center;
+     background: url("michel-rocha-GSIzNfR9GLE-unsplash.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+ 
+ .contact-info{
+   display: flex;
+   width: 100%;
+   max-width: 1200px;
+   align-items: center;
+   justify-content: center;
+   padding: 0 20px;
+   margin-left: 200px;
+ }
+ 
+ 
+ .card{
+   background: #2f3542;
+   padding: 0 20px;
+   margin: 0 10px;
+   width: calc(33% - 20px);
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   cursor: pointer;
+ }
+ 
+ .card-icon{
+   font-size: 28px;
+   background: #ff6348;
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   line-height: 60px !important;
+   border-radius: 50%;
+   transition: 0.3s linear;
+ }
+ 
+ .card:hover .card-icon{
+   background: none;
+   color: #ff6348;
+   transform: scale(1.6);
+ }
+ 
+ .card p{
+   margin-top: 20px;
+   font-weight: 300;
+   letter-spacing: 2px;
+   max-height: 0;
+   opacity: 0;
+   transition: 0.3s linear;
+ }
+ 
+ .card:hover p{
+   max-height: 40px;
+   opacity: 1;
+ }
+ 
+ 
+ @media screen and (max-width:800px) {
+   .contact-info{
+     flex-direction: column;
+     margin-left: 40px;
+   }
+   .card{
+     width: 100%;
+     max-width: 300px;
+     margin: 10px 0;
+   }
+ }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*MOBILE RESPONSIVE*/
-          
-@media only screen and (min-width:932px){
-              
- .mobile_menu {
-  margin: 0px;
-  display: none;
-}
-              
-.list li a.active {
-  background: #222;
-        color:#fff;
-}      
-
-   .list li:hover{
-    transform: rotate(90deg);}
-          
-          
-    .list li{
-    transition: transform .5s;}
-  
-}
-
-@media only screen and (max-width:932px){
-              
-.mobile_menu img
- {
-     float: right;
-}
-              
-  .mobile_menu {
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  font-size: 22px;
-  font-family: sans-serif;
-  cursor: pointer;
-  overflow: hidden;
-                      
-}
-              
-              
-#drop-down {
-  background: gray;
-  overflow: hidden;
-  box-shadow: 0px 1px 4px -2px !important;
-  padding: 0px;
-  display:none;
-} 
-              
-.list {
-  margin: 0;
-  Float: right;
-  width: 100%;
-}               
-              
-li {
-  display:block;
-  list-style: none;
-  Padding: 0px;
-  text-align: center;
-}               
-              
-ul li a {
-  text-decoration: none;
-  padding: 11px;
-  font-family: sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: bold;
-  display: block;
-  transition: .2s ease-in-out;
-  color: #fff;
-}         
-              
- li:hover {
-  transform: scale(1.1);
-  transition: .7s linear;
-}
-              
-li:hover {
-  -moz-transform: scale(1.1);
-  -moz-transition: .7s linear;
-}
-              
-span {
-  font-size: 13px;
-  font-weight: bold;
-}        
+ footer{
+    background: lightsteelblue;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
   }
+  footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+  }
+  footer .text span a{
+    font-weight: 500;
+    color: #FFF;
+  }
+  footer .text span a:hover{
+    text-decoration: underline;
+  }
+ 
+
+
+
+
